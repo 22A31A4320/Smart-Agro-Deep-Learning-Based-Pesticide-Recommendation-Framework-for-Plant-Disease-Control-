@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>AgroVision AI</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- BACKGROUND CANVAS -->
+<canvas id="particleCanvas"></canvas>
+
+<!-- TOP NAVIGATION -->
+<header class="main-nav" id="mainNav">
+  <span class="main-tab active" data-tab="home">Home</span>
+  <span class="main-tab" data-tab="disease">Disease</span>
+  <span class="main-tab" data-tab="pesticide">Pesticides</span>
+  <span class="main-tab" data-tab="result">Results</span>
+  <span class="main-tab" data-tab="about">About</span>
+</header>
+
+<main class="content">
+
+  <!-- HOME -->
+  <section id="home" class="tab active">
+    <div class="upload-box">
+      <h2>Upload Leaf Image</h2>
+      <div class="image-preview">📷 Choose a leaf image</div>
+      <input type="file" id="imageUpload" hidden>
+      <button class="upload-btn">Upload Image</button>
+    </div>
+  </section>
+
+  <!-- DISEASE -->
+  <section id="disease" class="tab">
+    <h2>Plant Disease Detection</h2>
+    <p>Deep learning based plant disease identification.</p>
+  </section>
+
+  <!-- PESTICIDES -->
+  <section id="pesticide" class="tab">
+    <h2>Pesticide Recommendation</h2>
+    <p>Smart pesticide suggestions for detected diseases.</p>
+  </section>
+
+  <!-- RESULTS -->
+  <section id="result" class="tab">
+    <h2 id="leafName"></h2>
+    <div class="result-card">
+      <p><strong>Disease:</strong> Leaf Blight</p>
+      <p><strong>Pesticide:</strong> Neem Oil</p>
+      <p><strong>Confidence:</strong> 92%</p>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="tab">
+    <h2>About AgroVision AI</h2>
+    <p>
+      AgroVision AI is a deep learning-based pesticide recommendation
+      framework for intelligent plant disease control.
+    </p>
+  </section>
+
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
